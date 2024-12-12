@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishaShool Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>DishaShool Calculator</h1>
+        <form action="/" method="POST">
+            <label for="dayInput">Enter Day:</label>
+            <input type="text" id="day" name="day" placeholder="Enter a day (e.g., Monday)" required>
+            <button type="submit">Calculate DishaShool</button>
+            {% if result %}
+                    <h2>{{ result }}</h2>
+            {% endif %}  
+        </form>
+
+        <!-- Using a pseudo-element to simulate result display -->
+        <!-- <div id="result" class="result">
+            <div class="result-message">
+                {% if result %}
+                    <h2>{{ result }}</h2>
+                {% endif %}    
+            </div>-->
+        </div>
+    </div>
+</body>
+</html>
